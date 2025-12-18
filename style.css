@@ -1,0 +1,114 @@
+/* Сбрасываем лишние отступы браузера. Это правило хорошего тона. */
+body {
+    font-size: 18px; /* Добавь это. Стандарт сейчас — 16-18px, а не 14px. */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Современный шрифт */
+    background-color: #e0f7fa; /* Светло-серый фон */
+    color: #333; /* Темно-серый текст (черный режет глаза) */
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Выравниваем всё по центру по горизонтали */
+    align-items: center;     /* Выравнивает их по центру по горизонтали */
+    min-height: 100vh; /* Высота на весь экран */
+
+}
+
+/* Оформляем главный контейнер страницы */
+main {
+    background-color: white;
+    width: 90%;
+    max-width: 1000px; /* Не шире 600px */
+    padding: 40px;
+    min-height: 85vh; /* Карточка займет минимум 50% высоты экрана, даже если текста мало */
+    border-radius: 20px; /* Скругленные углы */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Легкая тень для объема */
+    /* Добавляем Flexbox ВНУТРЬ карточки, чтобы растянуть контент */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Header сверху, Footer прибьется к самому низу карточки */
+}
+
+/* Стили для заголовков */
+header h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 3rem; /* Сделаем заголовок массивным */
+    margin-bottom: 20px;
+}
+
+header p {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Отступы между секциями */
+section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Линия-разделитель */
+    padding-bottom: 20px;
+}
+
+/* Убираем линию у последней секции */
+section:last-child {
+    border-bottom: none;
+}
+
+/* Ссылка */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении мыши */
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 20px;
+}
+/* Стиль кнопки */
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* --- ТЕМНАЯ ТЕМА --- */
+/* Когда мы добавим этот класс к body через JS, сработают эти правила */
+body.dark-mode {
+    background-color: #2c3e50; /* Темный фон страницы */
+    color: #ecf0f1; /* Светлый текст */
+}
+
+body.dark-mode main {
+    background-color: #34495e; /* Темная карточка */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Тень пожестче */
+}
+
+body.dark-mode header h1 {
+    color: #ecf0f1; /* Заголовок становится белым */
+}
+
+body.dark-mode section {
+    border-bottom: 1px solid #7f8c8d; /* Разделители тусклее */
+}
+
+body.dark-mode a {
+    color: #5dade2; /* Ссылки посветлее */
+}
