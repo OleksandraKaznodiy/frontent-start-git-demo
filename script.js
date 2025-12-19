@@ -19,6 +19,7 @@ button.addEventListener('click', () => {
     } else {
         button.textContent = '🌙 Темная тема';
     }
+});
     const skills = [
     { name: 'HTML5', level: 'Junior' },
     { name: 'CSS3', level: 'Junior' },
@@ -34,4 +35,4 @@ function renderSkills() {
     });
 }
 renderSkills();
-});
+
