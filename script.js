@@ -24,7 +24,7 @@ button.addEventListener('click', () => {
     { name: 'HTML5', level: 'Junior' },
     { name: 'CSS3', level: 'Junior' },
     { name: 'JavaScript', level: 'Beginner' },
-    { name: 'Git', level: 'Junior' }
+    { name: 'Git', level: 'Junior' },
     { name: 'React', level: 'Zero level' }
 ];
 const skillsList = document.getElementById('skills-list');
