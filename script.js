@@ -29,15 +29,12 @@ button.addEventListener('click', () => {
 ];
 const skillsList = document.getElementById('skills-list');
 function renderSkills() {
-    // Формируем ОДНУ большую строку со всеми li внутри
     const htmlSnippet = skills.map(skill => `
         <li class="skill-item">
             <strong>${skill.name}</strong> 
             <span class="level-badge">${skill.level}</span>
         </li>
-    `).join(''); // Превращаем массив строк в одну строку
-
-    // Вставляем всё разом в список
+    `).join('');
     skillsList.innerHTML = htmlSnippet;
 }
 renderSkills();
