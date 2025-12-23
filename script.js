@@ -29,11 +29,16 @@ button.addEventListener('click', () => {
 ];
 const skillsList = document.getElementById('skills-list');
 function renderSkills() {
-    skills.forEach(skill => {
-        const li = document.createElement('li');
-        li.textContent = skill.name + ' — уровень: ' + skill.level;
-        skillsList.appendChild(li);
-    });
+    // Формируем ОДНУ большую строку со всеми li внутри
+    const htmlSnippet = skills.map(skill => `
+        <li class="skill-item">
+            <strong>${skill.name}</strong> 
+            <span class="level-badge">${skill.level}</span>
+        </li>
+    `).join(''); // Превращаем массив строк в одну строку
+
+    // Вставляем всё разом в список
+    skillsList.innerHTML = htmlSnippet;
 }
 renderSkills();
 
