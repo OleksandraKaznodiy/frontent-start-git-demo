@@ -112,3 +112,23 @@ body.dark-mode section {
 body.dark-mode a {
     color: #5dade2; /* Ссылки посветлее */
 }
+#skills-list {
+    list-style: none; /* Убираем точки */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills-list li {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+body.dark-mode #skills-list li {
+    background: #5dade2;
+    color: #2c3e50;
+}
